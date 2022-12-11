@@ -1,0 +1,45 @@
+<app-admin-loginbar></app-admin-loginbar>
+
+<h1>View all tasks</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Emp ID</th>
+                                <th>Name</th>
+                                <th>phone No</th>
+                                <th>emailId</th>
+                                <th>task Name</th>
+                                <th>task status</th>
+                                
+                            </tr>
+                        </thead>
+        
+                        <tbody *ngFor="let i of searchData">
+                            <tr>
+                                <td>{{i.id}}</td>
+                                <td>{{i.name}}</td>
+                                <td>{{i.phone_no}}</td>
+                                <td>{{i.email_id}}</td>
+                                <td>{{i.task_name}}</td>
+                                <td>{{i.task_status}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
