@@ -17,11 +17,14 @@ export class AdminLoginPageComponent {
   {
     if(this.username=="admin" && this.password=="12345")
     {
-      this.route.navigate(["/"])
+      this.route.navigate(["/adminProfile"])
     }
     else
     {
       alert("Invalid login")
+      this.username=""
+      this.password=""
+
     }
   }
 

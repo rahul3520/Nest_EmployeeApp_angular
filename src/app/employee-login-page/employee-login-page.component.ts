@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-employee-login-page',
@@ -11,6 +13,8 @@ export class EmployeeLoginPageComponent {
   emailId=""
   password=""
 
+  constructor(private api:ApiService,private route:Router){}
+
 
   employeeLoginCheck=()=>
   {
@@ -18,7 +22,29 @@ export class EmployeeLoginPageComponent {
 
     console.log(data)
 
-    
+    this.api.EmployeeLogin(data).subscribe(
+
+      (response:any)=>
+      {
+        console.log(response)
+
+        if(response.status=="success")
+        {
+          localStorage.setItem("empInfo",response.id)
+
+          this.route.navigate(["/employeeProfile"])
+        }
+        else
+        {
+          alert("Invalid Login!")
+
+          this.emailId=""
+          this.password=""  
+        }
+      }
+    )
+
+
   }
 
 }

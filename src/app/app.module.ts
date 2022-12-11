@@ -10,11 +10,20 @@ import { HttpClientModule } from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginPageComponent } from './admin-login-page/admin-login-page.component';
 import { EmployeeLoginPageComponent } from './employee-login-page/employee-login-page.component';
+import { EmployeeRegistrationPageComponent } from './employee-registration-page/employee-registration-page.component';
 
 const myRoute:Routes=[
   {
     path:"",
     component:AdminLoginPageComponent
+  },
+  {
+    path:"employeeLogin",
+    component:EmployeeLoginPageComponent
+  },
+  {
+    path:"employeeRegistration",
+    component:EmployeeRegistrationPageComponent
   }
 ]
 
@@ -23,7 +32,8 @@ const myRoute:Routes=[
     AppComponent,
     AdminLogoutbarComponent,
     AdminLoginPageComponent,
-    EmployeeLoginPageComponent
+    EmployeeLoginPageComponent,
+    EmployeeRegistrationPageComponent
   ],
   imports: [
     BrowserModule,
