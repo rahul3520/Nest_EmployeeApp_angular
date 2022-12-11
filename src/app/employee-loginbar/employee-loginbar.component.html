@@ -16,7 +16,7 @@
             <a class="nav-link active" aria-current="page" routerLink="/updateTaskstatus">Update Task status</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/employeeLogin">Logout</a>
+            <a class="nav-link active" aria-current="page" routerLink="/employeeLogin" (click)="RemoveID()">Logout</a>
           </li> 
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" >Logged Employee ID: {{empid}}</a>

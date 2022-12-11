@@ -16,6 +16,8 @@ import { EmployeeLoginbarComponent } from './employee-loginbar/employee-loginbar
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AddTaskPageComponent } from './add-task-page/add-task-page.component';
 import { ViewAlltaskPageComponent } from './view-alltask-page/view-alltask-page.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { ViewMytaskComponent } from './view-mytask/view-mytask.component';
 
 const myRoute:Routes=[
   {
@@ -41,6 +43,14 @@ const myRoute:Routes=[
   {
     path:"viewallTasks",
     component:ViewAlltaskPageComponent
+  },
+  {
+    path:"employeeProfile",
+    component:EmployeeProfileComponent
+  },
+  {
+    path:"viewmyTasks",
+    component:ViewMytaskComponent
   }
 ]
 
@@ -55,7 +65,9 @@ const myRoute:Routes=[
     EmployeeLoginbarComponent,
     AdminProfileComponent,
     AddTaskPageComponent,
-    ViewAlltaskPageComponent
+    ViewAlltaskPageComponent,
+    EmployeeProfileComponent,
+    ViewMytaskComponent
   ],
   imports: [
     BrowserModule,

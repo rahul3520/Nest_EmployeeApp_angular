@@ -15,4 +15,10 @@ export class EmployeeLoginbarComponent {
     this.empid=localStorage.getItem("empInfo")
   }
 
+  RemoveID=()=>
+  {
+    localStorage.removeItem("empInfo")
+    localStorage.clear
+  }
+
 }
