@@ -11,6 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLoginPageComponent } from './admin-login-page/admin-login-page.component';
 import { EmployeeLoginPageComponent } from './employee-login-page/employee-login-page.component';
 import { EmployeeRegistrationPageComponent } from './employee-registration-page/employee-registration-page.component';
+import { AdminLoginbarComponent } from './admin-loginbar/admin-loginbar.component';
+import { EmployeeLoginbarComponent } from './employee-loginbar/employee-loginbar.component';
 
 const myRoute:Routes=[
   {
@@ -33,7 +35,9 @@ const myRoute:Routes=[
     AdminLogoutbarComponent,
     AdminLoginPageComponent,
     EmployeeLoginPageComponent,
-    EmployeeRegistrationPageComponent
+    EmployeeRegistrationPageComponent,
+    AdminLoginbarComponent,
+    EmployeeLoginbarComponent
   ],
   imports: [
     BrowserModule,
