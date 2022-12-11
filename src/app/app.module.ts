@@ -18,6 +18,7 @@ import { AddTaskPageComponent } from './add-task-page/add-task-page.component';
 import { ViewAlltaskPageComponent } from './view-alltask-page/view-alltask-page.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { ViewMytaskComponent } from './view-mytask/view-mytask.component';
+import { UpdateTaskPageComponent } from './update-task-page/update-task-page.component';
 
 const myRoute:Routes=[
   {
@@ -51,6 +52,10 @@ const myRoute:Routes=[
   {
     path:"viewmyTasks",
     component:ViewMytaskComponent
+  },
+  {
+    path:"updateTaskstatus",
+    component:UpdateTaskPageComponent
   }
 ]
 
@@ -67,7 +72,8 @@ const myRoute:Routes=[
     AddTaskPageComponent,
     ViewAlltaskPageComponent,
     EmployeeProfileComponent,
-    ViewMytaskComponent
+    ViewMytaskComponent,
+    UpdateTaskPageComponent
   ],
   imports: [
     BrowserModule,
