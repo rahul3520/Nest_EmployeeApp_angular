@@ -1,0 +1,47 @@
+<app-employee-loginbar></app-employee-loginbar>
+
+<h1>Update task status</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>emp ID</th>
+                                <th>task Name</th>
+                                <th>task Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody *ngFor="let i of searchData">
+                            <tr>
+                                <td>{{i.empId}}</td>
+                                <td>{{i.taskName}}</td>
+                                <td>{{i.taskStatus}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Enter Task Name to update</label>
+                    <input name="taskName" [(ngModel)]="taskName" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="label-control">Enter new Task Status</label>
+                    <textarea name="taskStatus" [(ngModel)]="taskStatus" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="UpdateStatus()" class="btn btn-warning">Update task</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
